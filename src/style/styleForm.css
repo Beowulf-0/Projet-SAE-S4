@@ -1,10 +1,20 @@
+body{
+    display: flex;
+    justify-content: center;
+    background-color: #D3D3D3;
+}
 
+label[for="titre"]{
+    font-size: 20px;
+}
 
 #form_ident{
-    background-color: #F0EFD9;
+    background-color: #FFFDD0;
     border-radius: 20px;
-    width: 836px;
-    height: 555px;
+    width: 80%;
+    height: 55vh;
+    padding: 30px;
+    box-shadow: 0 0 20px 0 rgb(0 0 0 / 20%), 0 5px 5px 0 rgb(0 0 0 / 24%);
 }
 
 #form_ident > div{
@@ -22,8 +32,9 @@ form > #date-tel-ville {
     align-items: center;
 }
 
-form > #date-tel-ville > input{
+form{
     text-align: center;
+    font-family: Helvetica;
 }
 
 input[type="text"][name="nom"],

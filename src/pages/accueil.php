@@ -9,7 +9,8 @@
 
 <body>
     <form action="traitement.php" method="post" id="form_ident">
-        <label class="titre">Formulaire de renseignement</label>
+        <label for="titre"><b>Formulaire de renseignement</b></label>
+
         <div id="nom-prenom">
             <div>
                 <label for="nom" class="titre">Nom</label>
