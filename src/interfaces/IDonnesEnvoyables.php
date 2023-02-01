@@ -4,6 +4,6 @@
 
 interface IDonneesEnvoyables
 {
-    public function estEnvoyable(): bool;
+    public function estEnvoyable(array $data): bool;
 }
 
