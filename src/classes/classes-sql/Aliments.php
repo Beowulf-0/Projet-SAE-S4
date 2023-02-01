@@ -1,29 +1,36 @@
 <?php
 
-use Doctrine\ORM\Mapping as ORM;
+use Doctrine\ORM\Mapping;
+use Doctrine\ORM\Mapping\Entity;
+use Doctrine\ORM\Mapping\Table;
+use Doctrine\ORM\Mapping\Id;
+use Doctrine\ORM\Mapping\Column;
+use Doctrine\ORM\Mapping\GeneratedValue;
+use Doctrine\ORM\Mapping\ManyToOne;
+use Doctrine\ORM\Mapping\JoinColumn;
+
 
 /**
- * @ORM\Entity
- * @ORM\Table(name="aliments")
+ * @Entity
+ * @Table(name="aliments")
  */
 class Aliments
 {
     /**
-     * @ORM\Id
-     * @ORM\Column(type="integer")
-     * @ORM\GeneratedValue
+     * @Id
+     * @Column(type="integer")
+     * @GeneratedValue
      */
     private $idAliment;
 
     /**
-     * @ORM\Column(type="string", length=200)
+     * @Column(type="string", length=200)
      */
     private $LabelAliment;
 
     /**
-     * @ORM\ManyToOne(targetEntity="CategorieAliment", inversedBy="aliments")
-     * @ORM\JoinColumn(name="CategorieAliment", referencedColumnName="idCategorie")
+     * @ManyToOne(targetEntity="CategorieAliment", inversedBy="aliments")
+     * @JoinColumn(name="CategorieAliment", referencedColumnName="idCategorie")
      */
     private $categorie;
-
 }
