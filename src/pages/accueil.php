@@ -7,6 +7,7 @@
     <link rel="stylesheet" type="text/css" href="../style/styleForm.css">
 </head>
 
+
 <body>
     <!--A déplacer dans src/classes/Formulaire.php-->
     <form action="traitement.php" method="post" id="form_ident">
@@ -55,12 +56,24 @@
         <label for="aliment">Aliment</label>
         <!--A developper-->
         
+         <!--
+         <?php 
+                require "../classes/Alim.php";
+                echo '<p> test </p>';
+                echo '<select name ="alim" id="alim-select"> ';
+                getAlim(array(1,2,3,4)); 
+                echo '</select>';
+                echo '<p> test2 </p>';
+            ?>
+        -->
+    
+        
 
         <div id="boutons">
             <input type="submit" value="Envoyer" id="bouton-validation">
 
             <!--Bouton annulation-->
-            <input type="reset" value="Annuler" id="bouton-annulation">
+            <input type="reset" value="Effacer" id="bouton-annulation">
         </div>
 
     </form>
