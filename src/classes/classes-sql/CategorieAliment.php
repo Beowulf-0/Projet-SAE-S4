@@ -1,22 +1,27 @@
 <?php
 
-use Doctrine\ORM\Mapping as ORM;
+use Doctrine\ORM\Mapping;
+use Doctrine\ORM\Mapping\Entity;
+use Doctrine\ORM\Mapping\Table;
+use Doctrine\ORM\Mapping\Id;
+use Doctrine\ORM\Mapping\Column;
+use Doctrine\ORM\Mapping\GeneratedValue;
 
 /**
- * @ORM\Entity
- * @ORM\Table(name="categoriealiment")
+ * @Entity
+ * @Table(name="categoriealiment")
  */
 class CategorieAliment
 {
     /**
-     * @ORM\Id
-     * @ORM\Column(type="integer")
-     * @ORM\GeneratedValue
+     * @Id
+     * @Column(type="integer")
+     * @GeneratedValue
      */
     private $idCategorie;
 
     /**
-     * @ORM\Column(type="string", length=100, unique=true)
+     * @Column(type="string", length=100, unique=true)
      */
     private $NomCategorie;
 }
