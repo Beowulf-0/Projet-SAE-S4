@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <title>Formulaire</title>
-    <link rel="stylesheet" type="text/css" href="../style/styleForm.css">
+    <link rel="stylesheet" type="text/css" href="../style/style.css">
 </head>
 
 <body>
