@@ -2,6 +2,6 @@
 
 interface IAliment
 {
-    public function getAlim(array $Alim);
+    public function getAlim($Alim);
 
 }

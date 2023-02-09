@@ -56,16 +56,17 @@
         <label for="aliment">Aliment</label>
         <!--A developper-->
         
-         <!--
+         
          <?php 
-                require "../classes/Alim.php";
+                require "..\classes\Alim.php";
                 echo '<p> test </p>';
                 echo '<select name ="alim" id="alim-select"> ';
-                getAlim(array(1,2,3,4)); 
+                //$truc = new Alim();
+                //$truc->getAlim(array(1,2,3,4)); 
                 echo '</select>';
                 echo '<p> test2 </p>';
             ?>
-        -->
+        
     
         
 
