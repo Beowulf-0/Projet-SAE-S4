@@ -1,0 +1,20 @@
+body > #corps{
+    display: inherit;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#corps > *{
+    margin-top: 10px;
+}
+
+#bouton > a{
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    background-color: grey;
+    height: 40px;
+}

@@ -104,7 +104,8 @@ input[type="submit"]:hover, input[type="reset"]:hover{
 }
 
 @media screen and (max-width: 900px)  {
-    form, form > #adresse-code-postal, form > #nom-prenom, #adresse-code-postal > div, #nom-prenom > div
+    form, form > #adresse-code-postal, form > #nom-prenom, #adresse-code-postal > div,
+    #nom-prenom > div, #graphiques > img
     {
         display: flex;
         flex-direction: column;
