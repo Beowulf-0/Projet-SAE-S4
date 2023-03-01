@@ -2,6 +2,6 @@
 
 interface IAliment
 {
-    public function getAlim($Alim);
+    public function getAlim(array &$id_alims_a_ignorer = array());
 
 }
