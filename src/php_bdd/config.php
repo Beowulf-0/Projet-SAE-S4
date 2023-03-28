@@ -16,7 +16,7 @@ if($mysqli === false){
 */
 
 	$hostname = "localhost";	//ou localhost
-	$base= "sondes";
+	$base= "sondage";
 	$loginBD= "root";	//ou "root"
 	$passBD="";
 	//$pdo = null;

@@ -8,7 +8,7 @@ label[for="titre"]{
     font-size: 20px;
 }
 
-#form_ident{
+form{
     background-color: #FFFDD0;
     border-radius: 20px;
     width: 80%;

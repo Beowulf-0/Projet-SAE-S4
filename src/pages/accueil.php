@@ -57,17 +57,14 @@
         <!--A developper-->
         
          
-            <?php 
+         <?php 
                 require "..\classes\Alim.php";
-                //echo '<p> test </p>';
+                echo '<p> test </p>';
                 echo '<select name ="alim" id="alim-select"> ';
-
-                $truc = new Alim();
-                //$truc->getAlim();
-                $truec = array(2,3,4);
-                $truc->getAlim($truec); 
+                //$truc = new Alim();
+                //$truc->getAlim(array(1,2,3,4)); 
                 echo '</select>';
-                //echo '<p> test2 </p>';
+                echo '<p> test2 </p>';
             ?>
         
     
