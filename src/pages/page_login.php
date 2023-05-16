@@ -10,16 +10,22 @@
 
 <body>
     <div id="container">
-        <form action="./accueil.php" name="form">
+        <form action="../php_bdd/verif_login.php" method="POST" name="form_log">
             <div>
                 <label> Adresse mail </label>
-                <input type="text" placeholder="Entrer votre adresse mail" name="group" required>
+                <input type="text" placeholder="Entrer votre adresse mail" name="mail" required>
             </div>
             <div>
                 <label> Mot de passe </label>
-                <input type="text" placeholder="Entrer votre mot de passe" name="group" required>
+                <input type="password" placeholder="Entrer votre mot de passe" name="mdp" required>
             </div>
             <input type="submit" value="Se connecter" id="submit">
+            <?php 
+                if(isset($_GET['erreur'])){
+                    //$err = $_GET['erreur'];
+                    echo "<p style='color:red'>Utilisateur ou mot de passe incorrect</p>";
+                }
+            ?> 
             <a href="./page_creation_compte.php"> Vous n'avez pas de compte ? Inscrivez-vous. </a>
         </form>
     </div>

@@ -34,7 +34,7 @@ form > #nom-prenom, form > #adresse-code-postal{
     align-items: center;
 }
 
-form, input{
+form, input, .texte{
     text-align: center;
     font-family: Helvetica;
 }
@@ -49,12 +49,6 @@ input[type="text"][name="adresse-postale"],
 input[type="text"][name="code-postal"]{
     width: 20vw;
     height: 20px;
-}
-
-input[type="date"],
-input[type="tel"],
-input[type="text"][name="ville"]{
-
 }
 
 input{

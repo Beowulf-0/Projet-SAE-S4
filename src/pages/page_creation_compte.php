@@ -10,10 +10,15 @@
 
 <body>
     <div id="container">
-        <form action="./page_login.php" method="post" name="form">
+        <form action="../php_bdd/verif_creation.php" method="post" name="form">
             <div>
                 <label> Adresse mail </label>
                 <input type="text" placeholder="Entrer votre adresse mail" name="mail" required>
+            </div>
+
+            <div>
+                <label> Nom d'utilisateur </label>
+                <input type="text" placeholder="Entrer votre nom d'utilisateur" name="name" required>
             </div>
 
             <div>
@@ -23,10 +28,19 @@
 
             <div>
                 <label> Numéro de téléphone </label>
-                <input type="text" placeholder="Entrer votre numéro de téléphone" name="num" required>
+                <input type="tel" placeholder="Entrer votre numéro de téléphone" pattern="[0][1-9]{2}[0-9]{8}" name="num" required>
             </div>
 
             <input type="submit" value="S'inscrire" id="submit">
+            <?php 
+                if(isset($_GET['erreur'])){
+                    $err= $_GET['erreur'];
+                    if($err == 1 || $err == 2){
+                        echo "<p style='color: red'> Utilisateur invalide </p>";
+                    }
+                }
+            ?>
+            
             <a href="./page_login.php"> Vous avez déjà un compte ? Connectez-vous. </a>
         </form>
     </div>

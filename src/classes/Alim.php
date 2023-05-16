@@ -17,7 +17,7 @@ class Alim implements IAliment
 
     public function getAlim(array &$id_alims_a_ignorer = array()) {
 
-    require ("../pages/config.php");
+      require ("../php_bdd/config.php");
       $sql = "select A.idAliment, A.LabelAliment, C.NomCategorie 
           from aliments A, categoriealiment c
           where A.CategorieAliment = C.idCategorie";
