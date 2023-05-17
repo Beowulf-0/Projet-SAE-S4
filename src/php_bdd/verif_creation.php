@@ -3,16 +3,17 @@
     require("../pages/page_creation_compte.php");
 
     $mail = isset($_POST['mail'])? $_POST['mail']:'';
+    $name = isset($_POST['name'])? $_POST['name']:'';
     $mdp = isset($_POST['mdp'])? $_POST['mdp']:'';
     $num = isset($_POST['num'])? $_POST['num']:'';
 
     var_dump($mail, $mdp, $num);
 
-    verif_crea($mail, $mdp, $num);
+    verif_crea($mail, $name, $mdp, $num);
 
     header("Location: ../pages/page_login.php");
 
-    function verif_crea($mail, $mdp, $num){
+    function verif_crea($mail, $name, $mdp, $num){
         require('config.php');
 
         $url= "../pages/page_login.php";
@@ -35,16 +36,14 @@
             var_dump($res);
 
             if(count($res) == 0){
-                $insert = "INSERT INTO utilisateur(mail_user, pwd_user, phone_user) VALUES (:mail_u, :pwd_u, :phone_u)";
+                $insert = "INSERT INTO utilisateur(mail_user, name_user, pwd_user, phone_user) VALUES (:mail_u, :name_u, :pwd_u, :phone_u)";
                 $ins = $pdo->prepare($insert);
                 $ins->bindParam(":mail_u", $mail);
                 $ins->bindParam(":pwd_u", $mdp);
                 $ins->bindParam(":phone_u", $num);
+                $ins->bindParam(":name_u", $name);
                 $ins->execute();
-                var_dump($res);
-
-                
-                return true;
+                //var_dump($res);
             }
             else{
                 header('Location: ../pages/page_creation_compte.php?erreur=2');

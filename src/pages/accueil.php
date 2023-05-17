@@ -9,6 +9,8 @@
 
 
 <body>
+    <?php include '../pages/header.php' ?>
+    
     <!--A déplacer dans src/classes/Formulaire.php-->
     <form action="traitement.php" method="post" id="form_ident">
         <label for="titre"><b>Formulaire de renseignement</b></label>

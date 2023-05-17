@@ -14,7 +14,7 @@
     $mdp = isset($_POST['mdp'])?$_POST['mdp']:'';
 
     if(!verif_login($email, $mdp)){
-        echo "Guignol";
+        header("Location: ../pages/page_login.php?erreur=1");
     }
     else{
         //var_dump($profil);
@@ -52,7 +52,7 @@
             return false;
         }
         else{
-            header("location: page_login.php?erreur=1");
+            header("Location: ../pages/page_login.php?erreur=2");
             return false;
         }
     }

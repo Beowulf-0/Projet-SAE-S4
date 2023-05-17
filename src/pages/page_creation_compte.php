@@ -28,7 +28,7 @@
 
             <div>
                 <label> Numéro de téléphone </label>
-                <input type="tel" placeholder="Entrer votre numéro de téléphone" pattern="[0][1-9]{2}[0-9]{8}" name="num" required>
+                <input type="tel" placeholder="Entrer votre numéro de téléphone" pattern="[0-9]{10}" name="num" required>
             </div>
 
             <input type="submit" value="S'inscrire" id="submit">
