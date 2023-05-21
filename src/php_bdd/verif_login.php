@@ -13,17 +13,15 @@
     $email = isset($_POST['mail'])?$_POST['mail']:'';
     $mdp = isset($_POST['mdp'])?$_POST['mdp']:'';
 
-    if(!verif_login($email, $mdp)){
-        header("Location: ../pages/page_login.php?erreur=1");
-    }
-    else{
-        //var_dump($profil);
-        //$_SESSION['profil'] = $profil;
+    if(verif_login($email, $mdp, $profil)){
         header("Location: ../pages/accueil.php");
     }
+    else{
+        header("Location: ../pages/page_login.php?erreur=1");
+    }
 
 
-    function verif_login($mail, $mdp){
+    function verif_login($mail, $mdp, $profil){
         require('./config.php');
         try{
             $select = "SELECT * FROM utilisateur WHERE mail_user=:mail_u AND pwd_user=:pwd_u";
@@ -37,22 +35,25 @@
 		    die("STOP Catch Verif"); // On arrête tout.
         }
 
-
         if($bool){
-            //echo $bool;
-            $result = $sel->fetchAll();
-            //echo $result;
+            $result = $sel->fetchAll(PDO::FETCH_ASSOC);
+            var_dump($result);
+            var_dump(empty($result));
 
-            if(count($result) !== 0){
-                //$profil = $result[0];
-                //var_dump($profil);
-                //die("fin connexion");
+            if(!empty($result)){
+                $profil = $result[0];
+                var_dump($profil);
+                $_SESSION['user_name'] = $profil['name_user'];
+                $_SESSION['loggedIn'] = true;
+
                 return true;
             }
-            return false;
+            else{
+                return false;
+            }
+            
         }
         else{
-            header("Location: ../pages/page_login.php?erreur=2");
             return false;
         }
     }

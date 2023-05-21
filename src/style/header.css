@@ -1,0 +1,30 @@
+header{
+    text-align: center;
+}
+
+header #navbar ul a{
+    background-color: lightblue;
+    text-decoration: none;
+    padding: 15px 10px;
+}
+
+header #navbar ul{
+    /*background-color: lightblue;*/
+    box-shadow: #333333;
+    padding: 0px;
+    width: auto;
+
+    display:flex;
+    justify-content: space-evenly;
+    border-radius: 20px;
+}
+
+header #navbar ul > a{
+    flex-grow: 1;
+    text-align: center;
+    border-radius: inherit;
+}
+
+header #navbar ul a:hover{
+    background-color: #A8C69F;
+}

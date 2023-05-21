@@ -7,18 +7,16 @@
     $mdp = isset($_POST['mdp'])? $_POST['mdp']:'';
     $num = isset($_POST['num'])? $_POST['num']:'';
 
-    var_dump($mail, $mdp, $num);
+    //var_dump($mail, $name, $mdp, $num);
 
     verif_crea($mail, $name, $mdp, $num);
-
-    header("Location: ../pages/page_login.php");
 
     function verif_crea($mail, $name, $mdp, $num){
         require('config.php');
 
-        $url= "../pages/page_login.php";
+        //var_dump($mail, $name, $mdp, $num);
         try{
-            $select = "SELECT count(*) from utilisateur where mail_user =:mail";
+            $select = "SELECT * from utilisateur where mail_user = :mail";
             $sel = $pdo->prepare($select);
             $sel->bindParam(":mail", $mail);
             $bool = $sel->execute();
@@ -28,14 +26,13 @@
             die("STOP Catch Verif");
         }
 
-        //var_dump($select);
-        //die("test");
-        if($bool){
-            var_dump($sel->fetchAll(PDO::FETCH_ASSOC));
-            $res = $sel->fetchAll(PDO::FETCH_ASSOC);
-            var_dump($res);
 
-            if(count($res) == 0){
+        if($bool){
+            $res = $sel->fetchAll(PDO::FETCH_ASSOC);
+            var_dump(empty($res));
+
+
+            if(empty($res)){
                 $insert = "INSERT INTO utilisateur(mail_user, name_user, pwd_user, phone_user) VALUES (:mail_u, :name_u, :pwd_u, :phone_u)";
                 $ins = $pdo->prepare($insert);
                 $ins->bindParam(":mail_u", $mail);
@@ -43,14 +40,15 @@
                 $ins->bindParam(":phone_u", $num);
                 $ins->bindParam(":name_u", $name);
                 $ins->execute();
-                //var_dump($res);
+                header("Location: ../pages/page_login.php");
             }
             else{
-                header('Location: ../pages/page_creation_compte.php?erreur=2');
+                header('Location: ../pages/page_creation_compte.php?erreur=2'); 
             }
+
         }
         else{
-            header('Location: ../pages/page_creation_compte.php?erreur=1');
+            header("Location: ../pages/page_creation_compte.php?erreur=1");
         }
     }
 

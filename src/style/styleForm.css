@@ -1,10 +1,14 @@
-#container{
-    width:400px;
-    margin: 10% auto 0;
+input[type=password], input[type=email], form{
+    margin-bottom: 10px;
 }
+
+#container{
+    width: 30%;
+}
+
 /* Bordered form */
 form {
-    width:100%;
+    border-radius: 10px;
     padding: 30px;
     border: 1px solid #f1f1f1;
     background-color: #FFFDD0;

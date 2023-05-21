@@ -4,7 +4,8 @@
 <head>
     <meta charset="utf-8">
     <title>Création de compte</title>
-    <link rel="stylesheet" type="text/css" href="../style/styleLogin.css">
+    <link rel="stylesheet" type="text/css" href="../style/style.css">
+    <link rel="stylesheet" type="text/css" href="../style/styleForm.css">
 </head>
 
 
@@ -37,6 +38,9 @@
                     $err= $_GET['erreur'];
                     if($err == 1 || $err == 2){
                         echo "<p style='color: red'> Utilisateur invalide </p>";
+                    }
+                    else{
+                        echo "<p style='color: red'> Email, nom ou numéro déjà existant </p>";
                     }
                 }
             ?>
