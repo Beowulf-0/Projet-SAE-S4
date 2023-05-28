@@ -14,7 +14,7 @@
     $mdp = isset($_POST['mdp'])?$_POST['mdp']:'';
 
     if(verif_login($email, $mdp, $profil)){
-        header("Location: ../pages/accueil.php");
+        header("Location: ../pages/sondage.php");
     }
     else{
         header("Location: ../pages/page_login.php?erreur=1");

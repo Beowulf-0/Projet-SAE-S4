@@ -28,7 +28,7 @@
             ?>
             <ul>
                 <a href="../pages/resultats.php"> Résultats </a>
-                <a href="../pages/accueil.php"> Sondage </a>
+                <a href="../pages/sondage.php"> Sondage </a>
                 <a href="../pages/profil.php"> Profil </a>
                 <a href="../pages/header.php?deconnexion=true"> Déconnexion </a>
             </ul>

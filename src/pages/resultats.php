@@ -17,7 +17,7 @@
             <img src="../images/graphique.png" class="image" alt="graphique droit">
         </div>
         <div id="bouton">
-            <a id="button" href="../pages/accueil.php"> Retour </a>
+            <a id="button" href="../pages/sondage.php"> Retour </a>
         </div>
     </div>
 </body>
