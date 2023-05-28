@@ -4,6 +4,7 @@
 <head>
     <meta charset="utf-8">
     <title> Formulaire de profil </title>
+    <link rel="icon" type="image/x-icon" href="../images/IUT.jpg">
     <link rel="stylesheet" href="../style/style.css" type="text/css"/>
     <link rel="stylesheet" href="../style/header.css" type="text/css"/>
     <link rel="stylesheet" type="text/css" href="../style/styleForm.css"/>
@@ -11,6 +12,7 @@
 
 
 <body>
+    <?php include '../pages/header_global.php'?>
     <?php include '../pages/header.php' ?> 
     
     <div id="container">

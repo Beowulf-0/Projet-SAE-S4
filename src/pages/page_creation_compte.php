@@ -4,12 +4,14 @@
 <head>
     <meta charset="utf-8">
     <title>Création de compte</title>
+    <link rel="icon" type="image/x-icon" href="../images/IUT.jpg">
     <link rel="stylesheet" type="text/css" href="../style/style.css">
     <link rel="stylesheet" type="text/css" href="../style/styleForm.css">
 </head>
 
 
 <body>
+    <?php include '../pages/header_global.php'?>
     <div id="container">
         <form action="../php_bdd/verif_creation.php" method="post" name="form">
             <div>

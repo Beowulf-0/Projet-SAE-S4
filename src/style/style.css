@@ -6,6 +6,10 @@ body{
     background-color: #D3D3D3;
 }
 
+.images{
+    width: 75%;
+}
+
 body #form{
     display: flex;
     justify-content: center;

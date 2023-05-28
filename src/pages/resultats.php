@@ -4,6 +4,7 @@
 <head>
     <meta charset="utf-8">
     <title>Résultats sondage</title>
+    <link rel="icon" type="image/x-icon" href="../images/IUT.jpg">
     <link rel="stylesheet" type="text/css" href="../style/style.css">
     <link rel="stylesheet" type="text/css" href="../style/styleResultat.css">
 </head>
