@@ -32,7 +32,7 @@ label{
     margin-bottom: 15px;
 }
 
-form > #date-tel-ville {
+form > #date-tel-ville, form > #categorie {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -118,4 +118,8 @@ input[type="submit"]:hover, input[type="reset"]:hover{
         justify-content: center;
         align-items: center;
     }
+}
+
+.alim-select{
+    margin-bottom: 10px;
 }

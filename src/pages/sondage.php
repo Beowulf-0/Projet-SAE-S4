@@ -61,16 +61,28 @@
             <label for="aliment">Aliment</label>
             <!--A developper-->
             
-            
-            <?php 
+            <div id="categorie">
+                <?php 
                     require "..\classes\Alim.php";
-                    echo '<p> test </p>';
-                    echo '<select name ="alim" id="alim-select"> ';
+                    require('../classes/Formulaire.php');
+                    //echo '<p> test </p>';
+                    //echo '<select name ="alim" id="alim-select"> ';
                     //$truc = new Alim();
                     //$truc->getAlim(array(1,2,3,4)); 
-                    echo '</select>';
-                    echo '<p> test2 </p>';
+                    //echo '</select>';
+                    //echo '<p> test2 </p>';
+                    $data = Formulaire::printChoices();
+                    for($i = 0; $i < 10; $i++){
+                        echo '<select name="categ" class="alim-select"> ';
+                        echo '<option value=""> Veuillez choisir une catégorie </option>';
+                        foreach($data as $value){
+                            echo '<option value="' . $value['idCategorie']. '">' . $value['NomCategorie'] . '</option>';
+                        }
+                        echo '</select>';
+                    }
                 ?>
+            </div>    
+            
             
         
             
