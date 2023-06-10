@@ -11,6 +11,7 @@
 
 
 <body>
+    <?php include '../pages/header_global.php' ?>
     <?php include '../pages/header.php' ?>
     
     <!--A déplacer dans src/classes/Formulaire.php-->
@@ -63,21 +64,17 @@
             
             <div id="categorie">
                 <?php 
-                    require "..\classes\Alim.php";
                     require('../classes/Formulaire.php');
-                    //echo '<p> test </p>';
-                    //echo '<select name ="alim" id="alim-select"> ';
-                    //$truc = new Alim();
-                    //$truc->getAlim(array(1,2,3,4)); 
-                    //echo '</select>';
-                    //echo '<p> test2 </p>';
                     $data = Formulaire::printChoices();
-                    for($i = 0; $i < 10; $i++){
+                    for($i = 1; $i <= 10; $i++){
                         echo '<select name="categ" class="alim-select"> ';
-                        echo '<option value=""> Veuillez choisir une catégorie </option>';
+                        echo '<option disabled selected value="null"> Veuillez choisir une catégorie </option>';
                         foreach($data as $value){
                             echo '<option value="' . $value['idCategorie']. '">' . $value['NomCategorie'] . '</option>';
                         }
+                        echo '</select>';
+                        echo '<select name="alim-'.$i.'" class="aliments">';
+                            echo '<option disabled selected value="null"> Veuillez choisir un aliment </option>';;
                         echo '</select>';
                     }
                 ?>
@@ -96,7 +93,6 @@
 
         </form>
     </div>
-    
 </body>
-
+    <script src="../js/categories.js"> </script>
 </html>
