@@ -2,14 +2,6 @@
 <?php
     session_start();
     
-    //if(array_key_exists(, $_SESSION) && count($_SESSION[]))
-    /**
-     * Pour envoyer les données : post ou get
-     * Dans ce script
-     */
-    /*$email = $_POST['email_user'];
-    $mdp = $_POST['pwd_user'];
-    echo $email . " " . $mdp;*/
     $email = isset($_POST['mail'])?$_POST['mail']:'';
     $mdp = isset($_POST['mdp'])?$_POST['mdp']:'';
 

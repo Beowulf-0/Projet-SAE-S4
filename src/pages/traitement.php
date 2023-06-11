@@ -21,7 +21,7 @@
 
         // Verifie si les données ne sont pas NULL
         if(isset($Nom,$Prenom,$Date,$Tel,$Adresse,$Postals,$Ville)){
-
+            var_dump($Nom, $Prenom, $Date);
         }
 
         $sql="INSERT INTO sondestest (NomSonde,PrenomSonde,DateNaissance,Adresse,CodePostal,Ville,Tel) VALUES ('$Nom','$Prenom','$Date','$Adresse','$Postal','$Ville','$Tel')";

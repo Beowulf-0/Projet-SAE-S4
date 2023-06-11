@@ -16,7 +16,7 @@
     
     <!--A déplacer dans src/classes/Formulaire.php-->
     <div id="form">
-        <form action="traitement.php" method="post" id="form_ident">
+        <form action="../php_bdd/verif_sondage.php" method="post" id="form_ident">
             <label for="titre"><b>Formulaire de renseignement</b></label>
 
             <div id="nom-prenom">
@@ -51,7 +51,7 @@
                 <input type="tel" name="tel" id="tel" placeholder="Numéro de téléphone" required>
 
                 <label for="ville" class="titre">Ville</label>
-                <input type="text" name="ville" id="ville" placeholder="Ville">
+                <input type="text" name="ville" id="ville" placeholder="Ville" required>
             </div>
 
             <!--Mettre une case à cocher pour respecter le RGPD-->
@@ -78,10 +78,7 @@
                         echo '</select>';
                     }
                 ?>
-            </div>    
-            
-            
-        
+            </div>     
             
 
             <div id="boutons">
@@ -90,7 +87,13 @@
                 <!--Bouton annulation-->
                 <input type="reset" value="Effacer" id="bouton-annulation">
             </div>
-
+            <?php
+                if(isset($_GET['err'])){
+                    $err = $_GET['err'];
+                    if($err == 1) echo "<p style='color:red'>Sondage incorrect. Veuillez soumettre des aliments SVP.</p>";
+                    elseif($err == 2) echo "<p style='color:red'>Utilisateur existant déjà.</p>";
+                }
+            ?>
         </form>
     </div>
 </body>
