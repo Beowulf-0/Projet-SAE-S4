@@ -97,5 +97,5 @@
         </form>
     </div>
 </body>
-    <script src="../js/categories.js"> </script>
+    <script src="../js/categories.js" type="text/javascript"> </script>
 </html>

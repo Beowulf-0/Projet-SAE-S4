@@ -1,5 +1,5 @@
 function createPieChart(listeLabels, listeData) {
-    var ctx = document.getElementById('myChart').getContext('2d');
+    var ctx = document.getElementById('graphique').getContext('2d');
     var myChart = new Chart(ctx, {
         type: 'pie',
         data: {

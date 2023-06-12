@@ -11,16 +11,17 @@
 
 
 <body>
+    <?php include '../pages/header_global.php' ?>
+    <?php include '../pages/header.php' ?>
     <div id="corps">
         <label for="titre"> <b> Résultats du sondage </b> </label>
-        <div id="graphiques">
-            <img src="../images/graphique.png" class="image" alt="graphique gauche" >
-            <img src="../images/graphique.png" class="image" alt="graphique droit">
+        <div id="graphique">
+            
         </div>
         <div id="bouton">
             <a id="button" href="../pages/sondage.php"> Retour </a>
         </div>
     </div>
 </body>
-
+<script src="../js/graphique.js"> </script>
 </html>
