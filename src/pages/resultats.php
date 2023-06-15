@@ -14,14 +14,26 @@
     <?php include '../pages/header_global.php' ?>
     <?php include '../pages/header.php' ?>
     <div id="corps">
-        <label for="titre"> <b> Résultats du sondage </b> </label>
-        <div id="graphique">
+        <label for="titre"> <b> Résultats du sondage :</b> </label>
+        <label for="titre"> <b> Par catégorie d'aliments </b> </label>
+        <canvas class="graphique">
             
-        </div>
+        </canvas>
+
+        <label for="titre"> <b> Bio : oui ou non ? </b> </label>
+        <canvas class="graphique">
+
+        </canvas>
+
+        <label for="titre"> <b> Vegan : oui ou non ? </b> </label>
+        <canvas class="graphique">
+
+        </canvas>
         <div id="bouton">
             <a id="button" href="../pages/sondage.php"> Retour </a>
         </div>
     </div>
 </body>
-<script src="../js/graphique.js"> </script>
+<script src="../js/graphique.js" type="text/javascript"> </script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </html>

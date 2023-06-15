@@ -20,7 +20,7 @@ for(let i = 0; i < categorieSelect.length; i++){
         });
 
         const content = JSON.parse(await res.text());
-        //console.log(content);
+        console.log(content);
 
         //const alimentList = document.getElementsByClassName("aliments");
 
@@ -39,39 +39,3 @@ for(let i = 0; i < categorieSelect.length; i++){
     }
     
 }
-
-//const categories = document.getElementsByClassName('aliments');
-
-// categories.onchange = async() => {
-//     let value = categories.options[categories.selectedIndex].value;
-
-//     if(value === "null") console.log("guignol");
-//     else{
-//         console.log(value);
-//     }
-// }
-
-// categorieSelect.forEach(element => {
-//     element.addEventListener('change', function(){
-//         let selectedCateg = this.value;
-//         console.log(selectedCateg);
-
-//         fetch('../classes/Formulaire.php?categorie=' + selectedCateg)
-//             .then(function(response){
-//                 if(response.ok){
-//                     return response.text();
-//                 }else{
-//                     throw new Error('Erreur lors de la récupération des données');
-//                 }
-//             })
-//             .then(function(data){
-//                 let alimentsDiv = document.querySelector('div#categorie select.aliments');
-//                 console.log(alimentsDiv);
-//                 //alimentsDiv.innerHTML = data
-//             })
-//             .catch(function(error){
-//                 console.error('erreur : ' + error);
-//             });
-            
-//     });
-// });

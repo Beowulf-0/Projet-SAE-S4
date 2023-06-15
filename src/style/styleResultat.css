@@ -5,8 +5,8 @@ body > #corps{
     align-items: center;
 }
 
-#corps > *{
-    margin-top: 10px;
+canvas{
+    margin-block: 10px 20px;
 }
 
 #bouton > a{
