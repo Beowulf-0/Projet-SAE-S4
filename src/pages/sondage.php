@@ -67,6 +67,7 @@
                     require('../classes/Formulaire.php');
                     $data = Formulaire::printChoices();
                     for($i = 1; $i <= 10; $i++){
+                        echo '<label for="titre"> Aliment ' . $i .  '</label>';
                         echo '<select name="categ" class="alim-select"> ';
                         echo '<option disabled selected value="null"> Veuillez choisir une catégorie </option>';
                         foreach($data as $value){

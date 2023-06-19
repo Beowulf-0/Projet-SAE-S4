@@ -20,12 +20,12 @@
             
         </canvas>
 
-        <label for="titre"> <b> Bio : oui ou non ? </b> </label>
+        <label for="titre"> <b> Bio / Non Bio </b> </label>
         <canvas class="graphique">
 
         </canvas>
 
-        <label for="titre"> <b> Vegan : oui ou non ? </b> </label>
+        <label for="titre"> <b> Végan / Non végan </b> </label>
         <canvas class="graphique">
 
         </canvas>

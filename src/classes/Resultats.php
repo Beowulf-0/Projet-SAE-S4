@@ -53,7 +53,7 @@ class Resultats
     public static function getComptesVegan(){
         require("../php_bdd/config.php");
 
-        $count = "SELECT IF(c.idCategorie = 13, 'Vegan', 'Pas vegan') as VeganOuPas, count(a.IdAliment) as nombreAliments FROM sondes AS s 
+        $count = "SELECT IF(c.idCategorie = 13, 'Végan', 'Non végan') as VeganOuPas, count(a.IdAliment) as nombreAliments FROM sondes AS s 
         INNER JOIN aliment AS a 
         ON IFNULL(s.Aliment1,-1) = a.IdAliment 
         OR IFNULL(s.Aliment2,-1) = a.IdAliment 
