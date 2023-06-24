@@ -1,19 +1,5 @@
+
 function createPieChart(listeLabels, listeData) {
-    /*var ctx = document.getElementById("graphique").getContext("2d");
-    var myChart = new Chart(ctx, {
-        type: 'pie',
-        data: {
-            labels: listeLabels,
-            datasets: [{
-                label: '# de ventes',
-                data: listeData,
-                borderWidth: 1
-            }]
-        },
-        options: {
-            responsive: true
-        }
-    });*/
     var ctx = document.getElementsByClassName("graphique");
 
     for(let i = 0; i < ctx.length; i++){

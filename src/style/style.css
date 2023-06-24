@@ -1,3 +1,8 @@
+*{
+    max-width: 95%;
+    height: auto;
+}
+
 body{
     display: flex;
     flex-direction: column;
@@ -9,14 +14,13 @@ body{
 .images{
     width: 75%;
 }
-
 body #form{
-    display: flex;
-    justify-content: center;
+    
+    width: 80vw;
 }
 
 label[for="titre"]{
-    font-size: 20px;
+    font-size: 1.5em;
     font-weight: bold;
 }
 
@@ -25,6 +29,9 @@ label[for="titre"]{
     border-radius: 20px;
     padding: 20px;
     box-shadow: 0 0 20px 0 rgb(0 0 0 / 20%), 0 5px 5px 0 rgb(0 0 0 / 24%);
+    display: inherit;
+    flex-direction: column;
+    align-items: center;
 }
 
 label{
@@ -59,9 +66,11 @@ input[type="text"][name="nom"],
 input[type="text"][name="prenom"],
 input[type="text"][name="adresse-postale"],
 input[type="text"][name="code-postal"]{
-    width: 20vw;
-    height: 20px;
+    width: 35vw;
+    height: 30px;
 }
+
+
 
 input{
     border-radius:10px;
@@ -109,14 +118,24 @@ input[type="submit"]:hover, input[type="reset"]:hover{
     background-color: #C8C8C8;
 }
 
-@media screen and (max-width: 900px)  {
-    form, form > #adresse-code-postal, form > #nom-prenom, #adresse-code-postal > div,
-    #nom-prenom > div, #graphiques > img
+@media screen and (min-width:100px) and (max-width : 1090px)  {
+    form > #adresse-code-postal, form > #nom-prenom, #adresse-code-postal > div,
+    #nom-prenom > div
     {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+    }
+    form{
+        width: 95%;
+    }
+    input[type="date"][name="date"],
+    input[type="tel"][name="tel"],
+    input[type="text"][name="ville"],
+    .alim-select, .aliments{
+        width: 40vw;
+        height: 25px;
     }
 }
 
