@@ -37,8 +37,6 @@ async function loadingChart(){
     listeLabels_vegan = [];
     listeLabels_bio = [];
 
-    //console.log(data);
-
     for(let i = 0; i < data[0].length; i++){
         listeData_categ.push(data[0][i]['nombreAliments']);
         listeLabels_categ.push(data[0][i]['NomCategorie']);
@@ -83,8 +81,6 @@ contentChart.then(({listeData_categ, listeLabels_categ, listeData_bio, listeLabe
 
     data_vegan = listeData_vegan;
     labels_vegan = listeLabels_vegan;
-
-    console.log([labels_categ, labels_bio, labels_vegan], [data_categ, data_bio, data_vegan]);
 
     createPieChart([labels_categ, labels_bio, labels_vegan], [data_categ, data_bio, data_vegan]);
 });

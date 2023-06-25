@@ -2,13 +2,6 @@
 require_once  '../interfaces/IFormulaire.php';
 class Formulaire implements IFormulaire
 {
-    public function getFormulaire(IDonnesEnvoyables $getTruc): string
-    {
-        // Importer le code du formulaire lorsqu'il sera terminé
-        $html = "";
-        return $html;
-    }
-
     public static function printChoices(){
         require ('../php_bdd/config.php');
 
