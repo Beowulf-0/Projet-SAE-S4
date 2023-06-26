@@ -22,5 +22,10 @@
         ?>
     </div>
 </body>
-    <script src="../js/categories.js" type="text/javascript"> </script>
+    <script src="../js/classes/Factory.js" type="module/javascript"> </script>
+    <script type="module">
+        import { Factory } from '../js/classes/Factory.js';
+        const f = new Factory();
+        const c = f.getCategories();
+    </script>
 </html>

@@ -20,6 +20,12 @@
     ?>
 </body>
 
-<script src="../js/graphique.js" type="text/javascript"> </script>
+<script src="../js/classes/Factory.js" type="module/javascript"></script>
+<script type="module">
+    import { Factory } from '../js/classes/Factory.js';
+    const f = new Factory();
+    const g = f.getGraphique();
+</script>
+
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </html>
